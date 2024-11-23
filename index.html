@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clinical Research Course</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+
+</head>
+<style>
+    .float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+	background-color:#25d366;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+  font-size:30px;
+	box-shadow: 2px 2px 3px #999;
+  z-index:100;
+}
+
+.my-float{
+	margin-top:16px;
+}
+    body {
+        font-family: 'Roboto', Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f6f9;
+        color: #333;
+        line-height: 1.6;
+    }
+
+    .container.Fullscreen {
+        margin-top: 30px;
+    }
+
+
+    h2,
+    h3,
+    h4,
+    h5 {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;
+        color: #0056b3;
+    }
+
+    .details-header {
+        font-weight: bold;
+        font-size: 1.1rem;
+        background-color: #0056b3;
+        color: #fff;
+        padding: 10px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    .row.text-center {
+        margin-bottom: 10px;
+    }
+
+    .row.text-center .col-md-2,
+    .row.text-center .col-md-3 {
+        padding: 10px;
+        background-color: #ffffff;
+        border: 1px solid #ddd;
+        font-size: 1rem;
+    }
+
+
+    .fixed-tabs {
+        position: sticky;
+        top: 0;
+        height: 100%;
+        padding-top: 30px;
+    }
+
+    .nav-pills .nav-link {
+        border-radius: 4px;
+        font-weight: bold;
+        padding: 12px 20px;
+        margin-bottom: 10px;
+        background-color: #f8f9fa;
+        color: #333;
+        transition: background-color 0.3s, color 0.3s;
+        text-align: left;
+    }
+
+    .nav-pills .nav-link.active {
+        background-color: #0056b3;
+        color: #fff;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-pills .nav-link:hover {
+        background-color: #0056b3;
+        color: #fff;
+    }
+
+    .nav-pills .nav-link i {
+        margin-right: 8px;
+        font-size: 1.2rem;
+    }
+
+
+    .scrollable-content {
+        background-color: #fff;
+        padding: 25px 30px;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        overflow-y: auto;
+    }
+
+    .table-container {
+        margin-top: 20px;
+    }
+
+    .table-heading {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 15px;
+        color: #0056b3;
+    }
+
+    .about-text {
+        font-size: 1rem;
+        color: #333;
+        line-height: 1.8;
+        margin-bottom: 20px;
+    }
+
+    .about-image {
+        width: 100%;
+        border-radius: 8px;
+        margin-bottom: 20px;
+    }
+
+
+    .table {
+        width: 100%;
+        margin-top: 20px;
+        border-collapse: collapse;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    .table th,
+    .table td {
+        padding: 12px;
+        text-align: center;
+        border: 1px solid #ddd;
+        color: #555;
+    }
+
+    .table th {
+        background-color: #0056b3;
+        color: #fff;
+        font-weight: bold;
+    }
+
+    .table tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+
+    .row {
+        margin-top: 20px;
+    }
+
+
+    .feature-list {
+        list-style: none;
+        padding-left: 0;
+        font-size: 1.1rem;
+        color: #555;
+    }
+
+    .feature-list li {
+        margin-bottom: 12px;
+        display: flex;
+        align-items: center;
+        font-weight: 500;
+    }
+
+    .feature-list .text-success {
+        font-size: 1.5rem;
+        margin-right: 10px;
+        color: #28a745;
+    }
+
+
+    .career-subheading {
+        font-size: 1.8rem;
+        color: #333;
+    }
+
+    .career-description {
+        font-size: 1.1rem;
+        color: #666;
+        margin-bottom: 20px;
+    }
+
+    .career-list {
+        list-style: none;
+        padding-left: 0;
+        font-size: 1rem;
+        color: #333;
+    }
+
+    .career-icon {
+        font-size: 1.5rem;
+        margin-right: 8px;
+        color: #0056b3;
+    }
+
+
+    .accordion-button {
+        background-color: #f8f9fa;
+        color: #333;
+        font-weight: bold;
+        border: none;
+    }
+
+    .accordion-button:hover {
+        background-color: #e9ecef;
+        color: #0056b3;
+    }
+
+    .accordion-button:not(.collapsed) {
+        background-color: #0056b3;
+        color: #fff;
+    }
+
+    .accordion-body {
+        font-size: 1rem;
+        color: #555;
+    }
+
+
+    .btn {
+        border-radius: 4px;
+        font-weight: 600;
+        padding: 10px 20px;
+    }
+
+    .btn-warning {
+        background-color: #ffc107;
+        color: #fff;
+        border: none;
+        transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .btn-warning:hover {
+        background-color: #e0a800;
+        transform: translateY(-2px);
+    }
+
+    .submit-btn {
+        background-color: #0056b3;
+        color: #fff;
+        font-weight: bold;
+        border: none;
+    }
+
+    .submit-btn:hover {
+        background-color: #0056b3;
+    }
+
+
+    @media (max-width: 768px) {
+        .fixed-tabs {
+            position: relative;
+            padding-top: 10px;
+            margin-bottom: 20px;
+        }
+
+        .scrollable-content {
+            padding: 20px;
+        }
+
+        .nav-pills .nav-link {
+            padding: 10px;
+            font-size: 0.9rem;
+        }
+
+        .feature-list li,
+        .career-list li {
+            font-size: 0.9rem;
+        }
+    }
+
+
+    .hero-section {
+        background: url('https://img.freepik.com/free-photo/funny-little-girl-headphones-with-laptop-plays-games-game-addiction-concept_169016-53925.jpg?t=st=1732344878~exp=1732348478~hmac=164de83dbc3efbadfd1c0462bbc41e6440d062a40d44283b1369406b3afbd0b0&w=1380') no-repeat center center/cover;
+        color: white;
+        padding: 100px 20px;
+        text-align: center;
+    }
+
+    .hero-section h1 {
+        font-size: 3rem;
+        text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+        animation: zoomIn 1s ease;
+    }
+
+    @keyframes zoomIn {
+        from {
+            transform: scale(0.9);
+            opacity: 0;
+        }
+
+        to {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+
+
+    .cta-highlight {
+        font-size: 1.2rem;
+        background: linear-gradient(90deg, #0056b3, #00c6ff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+</style>
+<link rel="stylesheet" href="main.css">
+
+<body>
+
+
+    <div>
+        <div class="hero-section">
+            <h1 class="" style="font-weight: 800;">Welcome to the Best Clinical Research Course</h1>
+            <p class="fs-2">Empower Your Career with 100% Placement Assistance</p>
+            <button class="btn btn-warning btn-lg">Get Started</button>
+        </div>
+
+        <!-- Section 1 -->
+        <div class="container Fullscreen border border-danger p-5"
+            style="border-radius: 30px; background-color: #0056b3; color: white;">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2 class=" mb-3 fs-1 text-white">Best Clinical Research Courses in Pune with 100% Job Guarantee
+                    </h2>
+                    <div class="gradient-text mb-2 fs-4">Top Training Institute</div>
+                    <p class="fs-5 mb-3">Ranked #1 Clinical Research Courses in Pune</p>
+                    <div class="mb-3">
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <ul class="list-unstyled">
+                                <li class="fs-5"><i class="bi bi-check2 text-warning"></i> Best and Affordable Price
+                                </li>
+                                <li class="fs-5"><i class="bi bi-check2 text-warning"></i> Unlimited Placement Calls
+                                </li>
+                                <li class="fs-5"><i class="bi bi-check2 text-warning"></i> 95% Placement Record</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <ul class="list-unstyled">
+                                <li class="fs-5"><i class="bi bi-check2 text-warning"></i> 100% Placement Assistance
+                                </li>
+                                <li class="fs-5"><i class="bi bi-check2 text-warning"></i> Learn From Corporate </li>
+                                <li class="fs-5"><i class="bi bi-check2 text-warning"></i> Pay in Installments Options
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mt-3">
+                        <button class="btn btn-warning me-2  w-50">Enquire Now</button>
+                        <button class="btn btn-warning p-2 w-50 mt-3">Call Now</button>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-container border border-white p-3" style="border-radius: 30px;">
+                        <div class="form-header">
+                            <h5 class="fs-1 mb-3 text-white text-center p-3 border border-white "
+                                style="border-radius: 10px ;">Download Brochure</h5>
+                        </div>
+                        <form>
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Name*</label>
+                                <input type="text" class="form-control" id="name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email*</label>
+                                <input type="email" class="form-control" id="email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="phone" class="form-label">Phone*</label>
+                                <input type="tel" class="form-control" id="phone" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="location" class="form-label">Location*</label>
+                                <select class="form-select" id="location" required>
+                                    <option value="" selected disabled>Select State</option>
+                                    <option value="state1">State 1</option>
+                                    <option value="state2">State 2</option>
+                                    <option value="state3">State 3</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="captcha" class="form-label">9 + 10 = *</label>
+                                <input type="text" class="form-control" id="captcha" required>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn submit-btn w-100 p-3 bg-warning"
+                                    style="border-radius: 15px;">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section 2: Details -->
+    <div class="container Fullscreen">
+        <div class="row text-center">
+            <div class="col-md-2 details-header text-black">Mode of Teaching</div>
+            <div class="col-md-2 details-header text-black">Duration</div>
+            <div class="col-md-2 details-header text-black">Fees</div>
+            <div class="col-md-3 details-header text-black">Placement</div>
+            <div class="col-md-3 details-header text-black">Students Trained</div>
+        </div>
+        <div class="row text-center mt-3">
+            <div class="col-md-2 fs-3">Live Online</div>
+            <div class="col-md-2 fs-3">3 Months</div>
+            <div class="col-md-2 fs-3">25K/- To 30K/-</div>
+            <div class="col-md-3 fs-3">100% Assistance</div>
+            <div class="col-md-3 fs-3">14500+</div>
+        </div>
+    </div>
+
+    <!-- Section 3:  Vertical Tabs -->
+    <div class="container Fullscreen">
+        <div class="row">
+            <div class="col-md-3 fixed-tabs">
+                <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <a class="nav-link active mb-2" id="v-pills-about-tab" data-bs-toggle="pill" href="#v-pills-about"
+                        role="tab" aria-controls="v-pills-about" aria-selected="true">
+                        <i class="bi bi-clipboard"></i> About Course
+                    </a>
+                    <a class="nav-link mb-2" id="v-pills-fees-tab" data-bs-toggle="pill" href="#v-pills-fees" role="tab"
+                        aria-controls="v-pills-fees" aria-selected="false">
+                        <i class="bi bi-cash"></i> Fees
+                    </a>
+                    <a class="nav-link mb-2" id="v-pills-features-tab" data-bs-toggle="pill" href="#v-pills-features"
+                        role="tab" aria-controls="v-pills-features" aria-selected="false">
+                        <i class="bi bi-gear"></i> Key Features
+                    </a>
+                    <a class="nav-link mb-2" id="v-pills-placement-tab" data-bs-toggle="pill" href="#v-pills-placement"
+                        role="tab" aria-controls="v-pills-placement" aria-selected="false">
+                        <i class="bi bi-people"></i> Our Placement
+                    </a>
+                    <a class="nav-link mb-2" id="v-pills-syllabus-tab" data-bs-toggle="pill" href="#v-pills-syllabus"
+                        role="tab" aria-controls="v-pills-syllabus" aria-selected="false">
+                        <i class="bi bi-book"></i> Course Syllabus
+                    </a>
+                    <a class="nav-link mb-2" id="v-pills-career-tab" data-bs-toggle="pill" href="#v-pills-career"
+                        role="tab" aria-controls="v-pills-career" aria-selected="false">
+                        <i class="bi bi-briefcase"></i> Career
+                    </a>
+                    <a class="nav-link mb-2" id="v-pills-faq-tab" data-bs-toggle="pill" href="#v-pills-faq" role="tab"
+                        aria-controls="v-pills-faq" aria-selected="false">
+                        <i class="bi bi-question-circle"></i> FAQ
+                    </a>
+
+                </div>
+            </div>
+            <div class="col-md-9 scrollable-content">
+                <div class="tab-content" id="v-pills-tabContent">
+                    <!-- About Course -->
+                    <div class="tab-pane fade show active" id="v-pills-about" role="tabpanel"
+                        aria-labelledby="v-pills-about-tab">
+
+                        <div class="table-container">
+                            <div class="table-heading">Clinical Research Courses | Top Training Institute In Pune</div>
+                            <p class="about-text">TechnoBridge is the leading training institute for Clinical Research
+                                courses in Pune with 100% placement assistance. TechnoBridge's clinical research courses
+                                are designed by corporate clinical research experts with an experience of 27+ years. Our
+                                course content is designed in line with the current requirements of the entire clinical
+                                research industry.</p>
+                            <p class="about-text">Our candidates are trained as per industry needs in our face-to-face
+                                live interactive sessions. The course covers all the important aspects of clinical
+                                research like – CR, Pharmacovigilance, Regulatory Affairs, drug development process,
+                                monitoring of trials, clinical data management, GCP- ICH E6, protocol designing, etc.
+                                The assignments and case studies are complimented with doubt clearing sessions after
+                                every live session to have a clear and deep understanding of each topic. To further
+                                polish our candidates, mock interviews are conducted in which our trainers check
+                                students’ knowledge and provide module-wise guidance to them. To conclude, a final
+                                examination is conducted with 50 MCQs for a duration of 45 minutes and 70% passing
+                                criteria.</p>
+                            <img src="https://www.technobridge.in/img/images/technobridge-training-process.png"
+                                alt="TechnoBridge Training Process" class="img-fluid mb-3 about-image" />
+                            <p class="about-text">We provide 100% job assurance to our students through unlimited
+                                interview calls. A dedicated team is assigned to provide placement support to our
+                                candidates. Students get several career opportunities once they complete their clinical
+                                research courses in Pune. They can work as a Clinical Research Associate (CRA), Clinical
+                                Data Management (CDM), Clinical Research Investigator (CRI), Business Development
+                                Manager, Clinical Research Manager, Medical Writer, Data Manager, Clinical Trial
+                                Assistant, Project Manager, Clinical Trial Writer, Medical Coder, Pharmacovigilance
+                                Associate, and Drug Discovery Officer.</p>
+                        </div>
+                    </div>
+                    <!-- Fees -->
+                    <div class="tab-pane fade" id="v-pills-fees" role="tabpanel" aria-labelledby="v-pills-fees-tab">
+                        <div class="table-container">
+                            <div class="table-heading">Top Clinical Research Courses by TechnoBridge & Fees</div>
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Course Name</th>
+                                        <th>Duration</th>
+                                        <th>Fees</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>PG Diploma in Clinical Research (Recorded)</td>
+                                        <td>3 Months</td>
+                                        <td>27K/- To 32K/-</td>
+                                    </tr>
+                                    <tr>
+                                        <td>PG Diploma in Clinical Research - Live Sessions</td>
+                                        <td>3 Months</td>
+                                        <td>25K/- To 30K/-</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Medical Coding Course</td>
+                                        <td>3 Months</td>
+                                        <td>30K/- To 35K/-</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Regulatory Affairs Course</td>
+                                        <td>3 Months</td>
+                                        <td>27K/- To 32K/-</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Clinical Data Management Course and Pharmacovigilance Course</td>
+                                        <td>2.5 Months</td>
+                                        <td>23K/- To 25K/-</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Good Clinical Practices Certification Course</td>
+                                        <td>15 Days</td>
+                                        <td>1K/-</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Key Features -->
+                    <div class="tab-pane fade" id="v-pills-features" role="tabpanel"
+                        aria-labelledby="v-pills-features-tab">
+                        <div class="table-heading">Why Choose TechnoBridge for Clinical Research Course?</div>
+                        <div class="row">
+                            <!-- Left Column -->
+                            <div class="col-md-6">
+                                <ul class="feature-list">
+                                    <li><span class="text-success">&#10004;</span> Learn From Corporate Experts /
+                                        Faculty</li>
+                                    <li><span class="text-success">&#10004;</span> 100% Placement Assistance</li>
+                                    <li><span class="text-success">&#10004;</span> Best and Affordable Price</li>
+                                    <li><span class="text-success">&#10004;</span> Life Time Access to The Course</li>
+                                    <li><span class="text-success">&#10004;</span> Detailed Curriculum</li>
+                                </ul>
+                            </div>
+                            <!-- Right Column -->
+                            <div class="col-md-6">
+                                <ul class="feature-list">
+                                    <li><span class="text-success">&#10004;</span> Mock Interviews</li>
+                                    <li><span class="text-success">&#10004;</span> Flexible Batch Timings</li>
+                                    <li><span class="text-success">&#10004;</span> Work on Assignments & Case Studies
+                                    </li>
+                                    <li><span class="text-success">&#10004;</span> Trained 14500+ Students</li>
+                                    <li><span class="text-success">&#10004;</span> Industry-Recognized Certification
+                                    </li> <!-- New Point -->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <!-- Our Placement -->
+                    <div class="tab-pane fade" id="v-pills-placement" role="tabpanel"
+                        aria-labelledby="v-pills-placement-tab">
+                        <div class="table-container">
+                            <div class="table-heading">Our Placement Companies</div>
+                            <p>We have successfully placed our students in renowned companies. Below are some of the top
+                                companies where our students have been placed:</p>
+                            <div class="row">
+                                <!-- First row of 6 images -->
+                                <div class="col-md-2 mb-4">
+                                    <img src="https://www.technobridge.in/assets/images/clients/1.png" alt="Cognizant"
+                                        class="img-fluid" />
+                                </div>
+                                <div class="col-md-2 mb-4">
+                                    <img src="https://www.technobridge.in/assets/images/clients/2.png" alt="Sciformix"
+                                        class="img-fluid" />
+                                </div>
+                                <div class="col-md-2 mb-4">
+                                    <img src="https://www.technobridge.in/assets/images/clients/3.png"
+                                        alt="3Gen Consulting" class="img-fluid" />
+                                </div>
+                                <div class="col-md-2 mb-4">
+                                    <img src="https://www.technobridge.in/assets/images/clients/4.png" alt="Accenture"
+                                        class="img-fluid" />
+                                </div>
+                                <div class="col-md-2 mb-4">
+                                    <img src="https://www.technobridge.in/assets/images/clients/5.png" alt="Infoweb"
+                                        class="img-fluid" />
+                                </div>
+                                <div class="col-md-2 mb-4">
+                                    <img src="https://www.technobridge.in/assets/images/clients/5.png" alt="Innoplexus"
+                                        class="img-fluid" />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <!-- Second row of 6 images -->
+                                <div class="col-md-2 mb-4">
+                                    <img src="https://www.technobridge.in/assets/images/clients/7.png"
+                                        alt="Ruby Hall Clinic" class="img-fluid" />
+                                </div>
+                                <div class="col-md-2 mb-4">
+                                    <img src="https://www.technobridge.in/assets/images/clients/8.png"
+                                        alt="Augustus Healthcare Solutions" class="img-fluid" />
+                                </div>
+                                <div class="col-md-2 mb-4">
+                                    <img src="https://www.technobridge.in/assets/images/clients/8.png"
+                                        alt="Access Healthcare" class="img-fluid" />
+                                </div>
+                                <div class="col-md-2 mb-4">
+                                    <img src="https://www.technobridge.in/assets/images/clients/9.webp" alt="Optum"
+                                        class="img-fluid" />
+                                </div>
+                                <div class="col-md-2 mb-4">
+                                    <img src="https://www.technobridge.in/assets/images/clients/12.webp"
+                                        alt="Spherical Insights" class="img-fluid" />
+                                </div>
+                                <div class="col-md-2 mb-4">
+                                    <img src="https://www.technobridge.in/assets/images/clients/14.webp"
+                                        alt="Springer Nature" class="img-fluid" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Course Syllabus -->
+                    <div class="tab-pane fade" id="v-pills-syllabus" role="tabpanel"
+                        aria-labelledby="v-pills-syllabus-tab">
+                        <h3>Course Syllabus</h3>
+                        <p>The Clinical Research Course content at Technobridge System is updated regularly to ensure
+                            that students receive the most up-to-date knowledge and skills in the field. As of 2024, the
+                            course content includes:</p>
+                        <div class="row">
+                            <!-- Left Column -->
+                            <div class="col-md-6">
+                                <div class="accordion" id="accordionLeft">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#leftCollapseOne" aria-expanded="true"
+                                                aria-controls="leftCollapseOne">
+                                                Introduction to Clinical Research
+                                            </button>
+                                        </h2>
+                                        <div id="leftCollapseOne" class="accordion-collapse collapse show"
+                                            data-bs-parent="#accordionLeft">
+                                            <div class="accordion-body">
+                                                <ul class="custom-list">
+                                                    <li>Introduction to Clinical Research</li>
+                                                    <li>Terminologies in Clinical Research</li>
+                                                    <li>Advantages of CR in India</li>
+                                                    <li>Introduction to Clinical Research- Notes</li>
+                                                    <li>Introduction to Clinical Research Quiz</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#leftCollapseThree"
+                                                aria-expanded="false" aria-controls="leftCollapseThree">
+                                                Monitoring of Trials
+                                            </button>
+                                        </h2>
+                                        <div id="leftCollapseThree" class="accordion-collapse collapse"
+                                            data-bs-parent="#accordionLeft">
+                                            <div class="accordion-body">
+                                                <ul class="custom-list">
+                                                    <li>Introduction to Clinical Research</li>
+                                                    <li>Terminologies in Clinical Research</li>
+                                                    <li>Advantages of CR in India</li>
+                                                    <li>Introduction to Clinical Research- Notes</li>
+                                                    <li>Introduction to Clinical Research Quiz</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#leftCollapseThree"
+                                                aria-expanded="false" aria-controls="leftCollapseThree">
+                                                Pharmacovigilance
+                                            </button>
+                                        </h2>
+                                        <div id="leftCollapseThree" class="accordion-collapse collapse"
+                                            data-bs-parent="#accordionLeft">
+                                            <div class="accordion-body">
+                                                <ul class="custom-list">
+                                                    <li>Introduction to Clinical Research</li>
+                                                    <li>Terminologies in Clinical Research</li>
+                                                    <li>Advantages of CR in India</li>
+                                                    <li>Introduction to Clinical Research- Notes</li>
+                                                    <li>Introduction to Clinical Research Quiz</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Right Column -->
+                            <div class="col-md-6">
+                                <div class="accordion" id="accordionRight">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#rightCollapseOne" aria-expanded="true"
+                                                aria-controls="rightCollapseOne">
+                                                Introduction to Clinical Research
+                                            </button>
+                                        </h2>
+                                        <div id="rightCollapseOne" class="accordion-collapse collapse show"
+                                            data-bs-parent="#accordionRight">
+                                            <div class="accordion-body">
+                                                <ul class="custom-list">
+                                                    <li>Introduction to Clinical Research</li>
+                                                    <li>Terminologies in Clinical Research</li>
+                                                    <li>Advantages of CR in India</li>
+                                                    <li>Introduction to Clinical Research- Notes</li>
+                                                    <li>Introduction to Clinical Research Quiz</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#rightCollapseTwo"
+                                                aria-expanded="false" aria-controls="rightCollapseTwo">
+                                                Clinical Data Management
+                                            </button>
+                                        </h2>
+                                        <div id="rightCollapseTwo" class="accordion-collapse collapse"
+                                            data-bs-parent="#accordionRight">
+                                            <div class="accordion-body">
+                                                <ul class="custom-list">
+                                                    <li>Introduction to Clinical Research</li>
+                                                    <li>Terminologies in Clinical Research</li>
+                                                    <li>Advantages of CR in India</li>
+                                                    <li>Introduction to Clinical Research- Notes</li>
+                                                    <li>Introduction to Clinical Research Quiz</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#rightCollapseThree"
+                                                aria-expanded="false" aria-controls="rightCollapseThree">
+                                                Regulatory Affairs
+                                            </button>
+                                        </h2>
+                                        <div id="rightCollapseThree" class="accordion-collapse collapse"
+                                            data-bs-parent="#accordionRight">
+                                            <div class="accordion-body">
+                                                <ul class="custom-list">
+                                                    <li>Introduction to Clinical Research</li>
+                                                    <li>Terminologies in Clinical Research</li>
+                                                    <li>Advantages of CR in India</li>
+                                                    <li>Introduction to Clinical Research- Notes</li>
+                                                    <li>Introduction to Clinical Research Quiz</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Career -->
+                    <div class="tab-pane fade" id="v-pills-career" role="tabpanel" aria-labelledby="v-pills-career-tab">
+                        <div class="table-heading text-center career-subheading">
+                            <h2>Career In Clinical Research: A Bright Future Ahead</h2>
+                        </div>
+                        <p class="text-center career-description">
+                            Clinical research is one of the most important streams in healthcare science. There is a
+                            huge demand for clinical research professionals in India since the early 2000s. However, a
+                            lack of awareness of the clinical research industry has led to a significant gap in the
+                            demand and supply of trained professionals. The industry is booming, and there is a critical
+                            need for skilled individuals.
+                        </p>
+                        <h4 class="text-center career-opportunities-title"><b>Career Opportunities</b></h4>
+                        <div class="row justify-content-center">
+                            <!-- Left Column -->
+                            <div class="col-lg-6 col-md-12 mb-4">
+                                <ul class="career-list">
+                                    <li><span class="career-icon">&#10004;</span> Clinical Research Associate (CRA)</li>
+                                    <li><span class="career-icon">&#10004;</span> Clinical Trial Assistant (CTA)</li>
+                                    <li><span class="career-icon">&#10004;</span> Medical Writer</li>
+                                    <li><span class="career-icon">&#10004;</span> Clinical Trial Auditor</li>
+                                    <li><span class="career-icon">&#10004;</span> Project Manager</li>
+                                </ul>
+                            </div>
+                            <!-- Right Column -->
+                            <div class="col-lg-6 col-md-12">
+                                <ul class="career-list">
+                                    <li><span class="career-icon">&#10004;</span> Clinical Research Investigator (CRI)
+                                    </li>
+                                    <li><span class="career-icon">&#10004;</span> Clinical Research Manager</li>
+                                    <li><span class="career-icon">&#10004;</span> Medical Coding</li>
+                                    <li><span class="career-icon">&#10004;</span> Medical & Regulatory Officer</li>
+                                    <li><span class="career-icon">&#10004;</span> Clinical Trial Writer</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ -->
+                    <div class="tab-pane fade" id="v-pills-faq" role="tabpanel" aria-labelledby="v-pills-faq-tab">
+                        <div class="table-heading">Frequently Asked Questions</div>
+                        <div class="accordion" id="accordionExample">
+
+                            <!-- Question 1 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        <strong>What is a clinical research course?</strong>
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <p>A clinical research course at TechnoBridge is a specialized training program
+                                            focused on providing comprehensive knowledge and skills for conducting
+                                            research in medical and healthcare domains.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Question 2 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        <strong>What are the benefits of taking a PG Diploma in clinical
+                                            research?</strong>
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <p>Industry-recognized certification, 27+ years experienced trainer, unlimited
+                                            placement calls through 100% job assistance, lifetime access to the course.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Question 3 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseThree" aria-expanded="false"
+                                        aria-controls="collapseThree">
+                                        <strong>What is the eligibility of the course?</strong>
+                                    </button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <p>B. Pharm, M. Pharm, BSc, MSc (Bio/Micro), Nursing, BDS, MBBS, BHMS, or any
+                                            life science graduate.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Question 4 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseFour" aria-expanded="false"
+                                        aria-controls="collapseFour">
+                                        <strong>What are the career options after completing a clinical research
+                                            training?</strong>
+                                    </button>
+                                </h2>
+                                <div id="collapseFour" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <p>Clinical research associates, pharmacovigilance officers, project managers,
+                                            data analysts, and regulatory affairs specialists, among others.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Question 5 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseFive" aria-expanded="false"
+                                        aria-controls="collapseFive">
+                                        <strong>Are clinical research training courses available online or
+                                            in-person?</strong>
+                                    </button>
+                                </h2>
+                                <div id="collapseFive" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <p>Our courses are available in an interactive live online mode.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Question 6 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                        <strong>What is the duration of PGDCR?</strong>
+                                    </button>
+                                </h2>
+                                <div id="collapseSix" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <p>The duration of TechnoBridge's PGDCR course is 3 months.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Question 7 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseSeven" aria-expanded="false"
+                                        aria-controls="collapseSeven">
+                                        <strong>Can I pursue this course while working full-time?</strong>
+                                    </button>
+                                </h2>
+                                <div id="collapseSeven" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <p>Yes, we have flexible timing for our courses.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Question 8 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseEight" aria-expanded="false"
+                                        aria-controls="collapseEight">
+                                        <strong>What is the fee of the clinical research course, and are there
+                                            installment options available?</strong>
+                                    </button>
+                                </h2>
+                                <div id="collapseEight" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <p>Our interactive live online course fee is ₹25,000 for one-time payment. For
+                                            installment options, the fee is ₹30,000.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    
+
+                </div>
+            </div>
+            <a href="https://api.whatsapp.com/send?phone=1234567890&text=Hello" class="float" target="_blank">
+                <i class="fa fa-whatsapp my-float"></i>
+                </a>
+
+           
+            <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+
+</body>
+
+</html>
